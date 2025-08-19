@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double Num1, Num2;
+    char operation;
+    cout << "Enter the  first number: ";
+    cin >> Num1;
+    cout << "Enter the  second number: ";
+    cin >> Num2;
+    cout << "Please Choose any operation (+, -, *, /): ";
+    cin >> operation;
+    switch (operation) {
+        case '+':
+            cout << "Here is your Result: " << Num1 + Num2 << endl;
+            break;
+        case '-':
+            cout << "Here is your Result: " << Num1 - Num2 << endl;
+            break;
+        case '*':
+            cout << "Here is your Result: " << Num1 * Num2 << endl;
+            break;
+        case '/':
+            if (Num2 != 0)
+                cout << "Here is your Result: " << Num1 / Num2 << endl;
+            else
+                cout << "Error! Division by zero is not allowed." << endl;
+            break;
+        default:
+            cout << "Invalid operation!" << endl;
+    }
+    return 0;
+}
